@@ -1,0 +1,24 @@
+Portfolio Rough Ideas
+Left to right slide website.
+Background color: purple (light or dark?)
+website frame: uncomplete rectancle?
+Menu bar location: left or top. Maybe left
+
+Home Page:
+Name and software engineer
+
+About Page:
+About myself
+
+Project Page:
+list of projects
+
+Contact Page:
+email, mobile, linkedin, github
+
+Animation:
+Animation will be separated from the page?
+Animation only works for sliding left to, right?
+1.	Bottom border animation when user slides the page.
+
+2.	Or top border animation flower petal added or removed when user slides the page,
