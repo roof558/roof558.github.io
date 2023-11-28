@@ -1,13 +1,11 @@
 import React from "react";
 import Sidebar, { SidebarItem } from "../components/Sidebar";
 import { FolderOpenDot, UserCircle, Phone, LayoutDashboard } from "lucide-react";
-// import { Link } from "react-router-dom";
-// import { Navbar } from "../components/Navbar";
 
-const Home = () => {
+const AboutMe = () => {
     return (
         <div className="flex">
-            <Sidebar>
+            <Sidebar className= 'flex'>
                 <SidebarItem 
                     icon={<LayoutDashboard size={20}/>}
                     text="Home"
@@ -19,14 +17,12 @@ const Home = () => {
                 <SidebarItem icon={<Phone size={20}/>} text="Contact" path="/contact" active />
             </Sidebar>
             <div>
-                <h1>
-                Hi,
-                <br /> This is Justin Lee's Project Portfolio Page
-                <br /> Software Engineer
-                </h1>
+                <p>
+                    About Me Page
+                </p>
             </div>
         </div>
     );
 };
 
-export default Home;
+export default AboutMe;

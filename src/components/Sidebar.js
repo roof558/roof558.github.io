@@ -1,5 +1,6 @@
 import { ChevronFirst, ChevronLast, MoreVertical } from "lucide-react"
 import { createContext, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SiderbarContext = createContext()
 export default function Sidebar({ children }) {
@@ -28,8 +29,14 @@ export default function Sidebar({ children }) {
     )
 }
 
-export function SidebarItem({ icon, text, active, alent }) {
+export function SidebarItem({ icon, text, path, active, alent }) {
     const {expanded} = useContext(SiderbarContext)
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate(path);
+    };
+
     return (
         <li className={`
             relative flex items-center py-2 my-1
@@ -39,7 +46,7 @@ export function SidebarItem({ icon, text, active, alent }) {
                 ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
                 : "hover:bg-indigo-50 text-gray-600"
             }
-        `}>
+        `} onClick={handleNavigate}>
             {icon}
             <span className={`overflow-hidden transition-all ${
                 expanded ? "w-52 ml-3" : "w-0"
