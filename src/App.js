@@ -1,22 +1,27 @@
 import React from "react";
-import { Routes, Route } from 'react-router-dom';
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import Project from "./pages/Project";
 import { ToastContainer } from 'react-toastify';
-
+import Sidebar, { SidebarItem } from "./components/Sidebar";
+import { FolderOpenDot, UserCircle, Phone, LayoutDashboard } from "lucide-react";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
   return (
     <>
       <main className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="flex">
+          <Sidebar>   
+              <SidebarItem 
+                  icon={<LayoutDashboard size={20}/>}
+                  text="Home"
+                  path="/"
+                  alent
+              />
+              <SidebarItem icon={<UserCircle size={20}/>} text="About" path="/about" active />
+              <SidebarItem icon={<FolderOpenDot size={20}/>} text="Project" path="/project" active />
+              <SidebarItem icon={<Phone size={20}/>} text="Contact" path="/contact" active />
+          </Sidebar>
+          <AnimatedRoutes />
+        </div>
       </main>
       <ToastContainer />
     </>
