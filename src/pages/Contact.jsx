@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
-        <motion.div inital={{width: 0}} animate={{width: "100%"}} exit={{x: window.innerWidth, transition: { duration: 0.1 }}}>
+        <motion.div 
+            className="bg-purple-200 h-screen"
+            initial={{width: 0}} 
+            animate={{width: "100%"}} 
+            exit={{x: -window.innerWidth, transition: { duration: 0.5 }}}
+        >
             <h1>
                 Contact Page
             </h1>
