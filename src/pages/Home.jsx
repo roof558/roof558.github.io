@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <motion.div 
             id="home"
-            className="bg-purple-200 h-screen"
+            className="bg-purple-200 h-screen w-full"
             initial={{width: 0}} 
             animate={{width: "100%"}} 
             exit={{x: -window.innerWidth, transition: { duration: 0.5 }}}
