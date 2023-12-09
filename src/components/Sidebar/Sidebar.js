@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-scroll';
 
 const SiderbarContext = createContext();
 
@@ -23,29 +23,29 @@ export default function Sidebar({ children }) {
   );
 }
 
-export function SidebarItem({ icon, text, path, active, alent }) {
-  const navigate = useNavigate();
-
-  const handleNavigate = () => {
-    navigate(path);
-  };
-
+export function SidebarItem({ icon, text, path, active, alent, offset }) {
   return (
-    <li
+    <Link
+      to="#home"
+      spy={true}
+      smooth={true}
+      offset={offset}
+      duration={100}
       className={`
-            relative flex items-center py-2 my-1
-            font-medium rounded-md cursor-pointer
-            transition-colors group 
-            ${active
-              ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-              : "hover:bg-indigo-50 text-gray-600"
-            }
-        `}
-      onClick={handleNavigate}
+        relative flex items-center py-2 my-1
+        font-medium rounded-md cursor-pointer
+        transition-colors group 
+        ${active
+          ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
+          : "hover:bg-indigo-50 text-gray-600"
+        }
+      `}
     >
-      {icon}
-      <span className={`overflow-hidden transition-all w-52 ml-3`}>{text}</span>
-      {alent && <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400`} />}
-    </li>
+      <li>
+        {icon}
+        <span className={`overflow-hidden transition-all w-52 ml-3`}>{text}</span>
+        {alent && <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400`} />}
+      </li>
+    </Link>
   );
 }

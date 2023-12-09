@@ -1,14 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
-        <motion.div 
-            className="bg-purple-200 h-screen"
-            initial={{width: 0}} 
-            animate={{width: "100%"}} 
-            exit={{x: -window.innerWidth, transition: { duration: 0.5 }}}
-        >
+        <div className="bg-purple-200 h-screen w-screen text-center" id="contact">
             <h1>
                 Contact Page
             </h1>
@@ -21,7 +15,7 @@ const Contact = () => {
             <p>
                 LinkedIn: https://www.linkedin.com/in/dongjoon-lee-a11bb6161/
             </p>
-        </motion.div>            
+        </div>            
     );
 };
 

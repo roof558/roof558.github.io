@@ -1,21 +1,14 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const Home = () => {
     return (
-        <motion.div 
-            id="home"
-            className="bg-purple-200 h-screen w-full"
-            initial={{width: 0}} 
-            animate={{width: "100%"}} 
-            exit={{x: -window.innerWidth, transition: { duration: 0.5 }}}
-        >
+        <div className="h-screen bg-purple-200 w-screen text-center" id="home">
             <h1>
             Hi,
             <br /> This is Justin Lee's Project Portfolio Page
             <br /> Software Engineer
             </h1>
-        </motion.div>
+        </div>
     );
 };
 
