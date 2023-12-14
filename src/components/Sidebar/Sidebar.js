@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import { Link } from 'react-scroll';
 
 const SiderbarContext = createContext();
 
@@ -23,29 +22,32 @@ export default function Sidebar({ children }) {
   );
 }
 
-export function SidebarItem({ icon, text, path, active, alent, offset }) {
+export function SidebarItem({ icon, text, path, active, alent, scrollElement }) {
+  const scrollPage = (pageId) => {
+    const pageElement = document.getElementById(pageId);
+
+    if (pageElement && scrollElement.current) {
+      scrollElement.current.scrollLeft = pageElement.offsetLeft;
+    }
+    // console.log("it clicked");
+  };
+
   return (
-    <Link
-      to="#home"
-      spy={true}
-      smooth={true}
-      offset={offset}
-      duration={100}
+    <li
       className={`
         relative flex items-center py-2 my-1
         font-medium rounded-md cursor-pointer
-        transition-colors group 
+        transition-colors group scrollPage
         ${active
           ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
           : "hover:bg-indigo-50 text-gray-600"
         }
       `}
+      onClick={() => scrollPage(path)}
     >
-      <li>
-        {icon}
-        <span className={`overflow-hidden transition-all w-52 ml-3`}>{text}</span>
-        {alent && <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400`} />}
-      </li>
-    </Link>
+      {icon}
+      <span className={`overflow-hidden transition-all w-52 ml-3`}>{text}</span>
+      {alent && <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400`} />}
+    </li>
   );
 }
