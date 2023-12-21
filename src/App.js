@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
+import { motion, useAnimation } from "framer-motion";
 
 function App() {
   const scrollElement = useRef(null);
@@ -17,7 +18,11 @@ function App() {
         <SidebarItem icon={<FolderOpenDot size={20} />} text="Project" path="project" scrollElement={scrollElement}/>
         <SidebarItem icon={<Phone size={20} />} text="Contact" path="contact" scrollElement={scrollElement}/>
       </Sidebar>
-      <div className="flex overflow-x-auto" ref={scrollElement}>
+      <motion.div 
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        className="flex overflow-x-auto" 
+        ref={scrollElement}>
         <div className="min-w-screen flex-shrink-0" id="home">
           <Home />
         </div>
@@ -30,7 +35,7 @@ function App() {
         <div className="min-w-screen flex-shrink-0" id="contact">
           <Contact />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

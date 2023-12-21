@@ -29,6 +29,7 @@ export function SidebarItem({ icon, text, path, active, alent, scrollElement }) 
     if (pageElement && scrollElement.current) {
       scrollElement.current.scrollLeft = pageElement.offsetLeft;
     }
+    
     // console.log("it clicked");
   };
 
