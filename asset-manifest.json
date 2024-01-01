@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.e68d658b.css",
-    "main.js": "/static/js/main.babe3342.js",
+    "main.css": "/static/css/main.b864e94e.css",
+    "main.js": "/static/js/main.3f9e3cb2.js",
     "static/js/787.6556bbdf.chunk.js": "/static/js/787.6556bbdf.chunk.js",
+    "static/media/job_board_website.png": "/static/media/job_board_website.7404d71983993161139d.png",
+    "static/media/chi_alpha.png": "/static/media/chi_alpha.272c372c19df9235b25a.png",
+    "static/media/portfolio_image.png": "/static/media/portfolio_image.039465ca698599b652a4.png",
+    "static/media/spam_classifcation.png": "/static/media/spam_classifcation.90411af0a2c404803bca.png",
     "index.html": "/index.html",
-    "main.e68d658b.css.map": "/static/css/main.e68d658b.css.map",
-    "main.babe3342.js.map": "/static/js/main.babe3342.js.map",
+    "main.b864e94e.css.map": "/static/css/main.b864e94e.css.map",
+    "main.3f9e3cb2.js.map": "/static/js/main.3f9e3cb2.js.map",
     "787.6556bbdf.chunk.js.map": "/static/js/787.6556bbdf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e68d658b.css",
-    "static/js/main.babe3342.js"
+    "static/css/main.b864e94e.css",
+    "static/js/main.3f9e3cb2.js"
   ]
 }
