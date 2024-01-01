@@ -21,7 +21,7 @@ const Contact = () => {
                 <h1 className="text-2xl pb-1">
                     Write a Message to Me
                 </h1>
-                <p className="pb-10">To roof558@gmail.com</p>
+                <p className="pb-10">Email will send to roof558@gmail.com</p>
                 <form ref={form} onSubmit={sendEmail}>
                 <div className="flex-col text-xl">
                     <label>Your Name</label>

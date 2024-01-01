@@ -7,20 +7,15 @@ const AboutMe = () => {
                 About Me
             </h1>
             <div className="flex pt-6 text-xl text-left list-none ml-72">
-                <ul className="text-left list-none">
-                    <li>Name: Dongjoon (Justin) Lee</li>
-                    <li>Graudated School: Washington State University</li>
-                    <li>Bachelor's Degree: Computer Science</li>
-                    <li>Email: roof558@gmail.com</li>
-                    <li>Phone: 425-273-8798</li>
-                    <li>Github:
+                <ul className="text-left list-none mt-20">
+                    <li className="mb-2">Name: Dongjoon (Justin) Lee</li>
+                    <li className="mb-2">Graudated School: Washington State University</li>
+                    <li className="mb-2">Bachelor's Degree: Computer Science</li>
+                    <li className="mb-2">Email: roof558@gmail.com</li>
+                    <li className="mb-2">Phone: 425-273-8798</li>
+                    <li className="mb-2">Github:
                         <a className="text-blue-700 underline ml-2" href="https://github.com/roof558?tab=repositories" target="_blank"  rel="noopener noreferrer">
                             https://github.com/roof558?tab=repositories
-                        </a>
-                    </li>
-                    <li>Portfolio Website:
-                        <a className="text-blue-700 underline ml-2" href="https://roof558.github.io/" target="_blank" rel="noopener noreferrer">
-                            https://roof558.github.io/
                         </a>
                     </li>
                     <li>LinkedIn: 
